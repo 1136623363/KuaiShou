@@ -34,7 +34,7 @@ class KuaiShou:
         with requests.Session() as s:
             url = 'https://live.kuaishou.com/u/{}'.format(self.rid)
             res = s.get(url, headers=headers)
-            # print(res.text)
+            print(res.text)
             livestream = re.search(r'liveStream":(.*),"author', res.text)
 
             if livestream:
@@ -57,10 +57,10 @@ def get_real_url(rid):
 
 
 # if __name__ == '__main__':
-#     # KPL704668133
-#     r = 'qk7777777'  # input('请输入快手直播房间ID：\n')
-#
-#     while 1:
-#         print(get_real_url(r))
-#
-#         time.sleep(30)
+    # KPL704668133
+    # r = 'hrj20011221'  # input('请输入快手直播房间ID：\n')
+    # print(get_real_url(r))
+    # while 1:
+    #     print(get_real_url(r))
+    #
+    #     time.sleep(30)
